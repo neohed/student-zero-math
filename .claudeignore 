@@ -1,0 +1,4 @@
+# Already in .gitignore but being explicit for Claude
+.ipynb_checkpoints/
+
+# Notebook output cells can be noisy for Claude
