@@ -47,6 +47,20 @@ Open any notebook in VS Code or JupyterLab and start reading. Each notebook is s
 
 ---
 
+## Working with Claude Code
+
+This repo is built with the help of Claude Code. `CLAUDE.md`, `PHILOSOPHY.md`, and `EXAMPLES.md` are read automatically at the start of every session — normal requests like "create a notebook on X" already pick up all of that context.
+
+One custom command is available for when a notebook's examples come out generic and need a deliberate redo:
+
+```
+/design-examples <concept or section name>
+```
+
+Use it during review/iteration, not as part of the initial build — e.g. after generating a notebook, if a section's examples feel flat: `/design-examples multiplying polynomials`. It walks through the full sequence in `EXAMPLES.md` (living example → separation → non-example → generalization → fusion → formal name) instead of a plain worked-example list.
+
+---
+
 ## Status
 
 Work in progress. Notebooks are added as topics are studied, revised as understanding deepens. That is the point.

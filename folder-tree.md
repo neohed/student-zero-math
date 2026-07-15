@@ -1,0 +1,15 @@
+# Folder Tree
+- .
+- |____.claude
+- |____.vscode
+- |____books
+- |____fundamentals
+- | |____01-pre-algebra-and-algebra
+- | | |____utils
+- | |____02-games-and-graphics
+- | |____stats
+- |____ideas
+- |____models
+- |____scripts
+- |____shared
+- |____tools

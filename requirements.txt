@@ -1,0 +1,11 @@
+# Core — fundamentals notebooks
+numpy
+pandas
+matplotlib
+jupyterlab
+ipykernel
+
+# AI / research paper companions (install when needed)
+# torch
+# transformers
+# vllm

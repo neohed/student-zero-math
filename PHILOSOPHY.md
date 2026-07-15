@@ -48,6 +48,40 @@ The notation comes second. Always. We build the intuition first in terms you alr
 
 ---
 
+## Why This Approach Works — The Neuroscience
+
+The teaching methods in this repo are not arbitrary. They are grounded in how the brain actually processes and retains new information, drawing on the work of psychiatrist and neuroscientist Iain McGilchrist.
+
+Two insights from McGilchrist are particularly relevant here.
+
+**Insight 1 — Knowledge agglomerates.**
+
+We do not learn new things in isolation. The brain builds new understanding by attaching it to existing structures — new knowledge needs somewhere to land. This is why abstract concepts introduced without context evaporate, while the same concepts introduced through familiar analogies stick.
+
+For programmers learning math, this means the programmer bridge is not just a convenience — it is how learning actually works. When we show that a summation $\sum$ is a for loop, or that solving for $x$ is like finding the input that passes a unit test, we are giving new knowledge a secure anchor in a structure the brain already owns. The math has somewhere to attach. It does not float unmoored in working memory and fade.
+
+This is also why the series structure of this repo matters. Each notebook builds on the last. Each new concept is introduced in relation to something already understood. The curriculum spirals — returning to familiar ground, each time from a higher vantage point.
+
+**Insight 2 — The right hemisphere attends to aliveness first.**
+
+McGilchrist's research shows that the right hemisphere of the brain attends first to novelty, complexity, and what he calls *aliveness* — a broader category than biological life. It includes anything that moves, flows, emerges, or behaves. The right hemisphere opens the door. The left hemisphere — which handles categorisation, analysis, and formal symbol manipulation — can only do its work once the right hemisphere has attended and signalled: *something is happening here.*
+
+This has a direct implication for how we teach: **lead with the living thing**.
+
+A bouncing ball that decays to rest, a curve being drawn in real time, a system responding dynamically to a slider — these are alive in McGilchrist's sense. They are complex, emergent, flowing. They engage the right hemisphere before the left hemisphere knows what's happening. The formal explanation then arrives into an already-engaged, already-curious brain. This is far more effective than leading with notation and following up with a demo.
+
+This is why every notebook in this repo leads with a running animation before introducing any formula. It is why interactive sliders are a pedagogical essential, not a cosmetic feature. It is why visual richness — trails, dynamic plots, colour — is not decoration but function.
+
+**The practical rules that follow from this:**
+
+- Show the living, moving, complex thing first — before any explanation
+- Use animation and interactive sliders in every notebook where possible
+- Let the right hemisphere attend before asking the left hemisphere to analyse
+- Build every concept on top of something already known — never introduce in isolation
+- The spiral curriculum is not just good practice — it is how the brain works
+
+---
+
 ## Formulas Are Code to Write, Not Code to Run
 
 This is one of the most common and least-discussed sources of confusion for programmers learning math.

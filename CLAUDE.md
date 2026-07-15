@@ -13,6 +13,7 @@ The author is [@neohed](https://github.com/neohed) — a software engineer with 
 The guiding principle is the **Feynman Technique**: writing clear explanations for others forces genuine understanding. The author is student zero. Everything is written as if explaining to a smart, experienced programmer who is new to the topic.
 
 Full philosophy: [PHILOSOPHY.md](./PHILOSOPHY.md)
+How to design examples: [EXAMPLES.md](./EXAMPLES.md)
 
 ---
 
@@ -130,6 +131,7 @@ Each PoC in `poc/` should:
 ## Session Notes
 
 - Check `PHILOSOPHY.md` if uncertain about tone or approach
+- Check `EXAMPLES.md` before writing worked examples for any concept — do not default to a plain worked-example list
 - When creating a new notebook, follow the notebook structure convention above
 - When creating a new paper companion, create the full folder structure: `notebook.ipynb`, `README.md`, and `poc/` placeholder
 - Prefer clear and simple over clever
