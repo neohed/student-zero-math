@@ -14,6 +14,7 @@ The guiding principle is the **Feynman Technique**: writing clear explanations f
 
 Full philosophy: [PHILOSOPHY.md](./PHILOSOPHY.md)
 How to design examples: [EXAMPLES.md](./EXAMPLES.md)
+How to review a notebook: [REVIEW.md](./REVIEW.md)
 
 ---
 
@@ -105,6 +106,25 @@ Each notebook should follow this structure:
 
 ---
 
+## Shared Helper Code Convention
+
+When a notebook introduces a helper function that a *later* notebook will also need (e.g. `poly_str`, `mono_str`, `factor_gcf`):
+
+- Write it **inline, in the notebook that first teaches it** — the code itself is part of the lesson (e.g. notebook 15's `poly_str` is the proof that "a polynomial is a dict"). Do not hide teaching code behind an import.
+- Also add it to the matching file in `shared/` (e.g. `shared/polynomials.py`) as the canonical, single source of truth.
+- Every **later** notebook that reuses that helper imports it from `shared/` rather than re-pasting it:
+  ```python
+  import sys
+  sys.path.insert(0, '../..')  # repo root, so `shared` is importable
+  from shared.polynomials import poly_str, poly_eval, poly_clean
+  ```
+  (Adjust the relative path if the notebook's folder depth differs from `fundamentals/<topic>/`.)
+- If a bug is found in a helper, fix it once in `shared/`, then update the one inline teaching copy to match. Never fix only one copy and leave others silently out of sync — check for other files that reuse the same helper.
+- Before writing any function meant to be reused, run `view` on `shared/polynomials.py` (or the matching shared file) and read its docstring index first — do not rely on memory of what already exists.
+- A notebook's own new-for-this-lesson helpers stay inline, not imported, even if they will later be added to `shared/` for the next notebook to reuse.
+
+---
+
 ## PoC Project Convention
 
 Each PoC in `poc/` should:
@@ -132,6 +152,7 @@ Each PoC in `poc/` should:
 
 - Check `PHILOSOPHY.md` if uncertain about tone or approach
 - Check `EXAMPLES.md` before writing worked examples for any concept — do not default to a plain worked-example list
+- Run `/review-notebook` before considering a new notebook finished, or when it depends on an older one
 - When creating a new notebook, follow the notebook structure convention above
 - When creating a new paper companion, create the full folder structure: `notebook.ipynb`, `README.md`, and `poc/` placeholder
 - Prefer clear and simple over clever
